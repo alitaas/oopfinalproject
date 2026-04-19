@@ -98,6 +98,11 @@ The system supports two types of persistence:
 ---
 
 ##  Example Output
+<img width="1085" height="1280" alt="photo_5416043688741246317_y" src="https://github.com/user-attachments/assets/b9ac2b3f-9d0b-4037-a0dd-e9b6877524b2" />
+<img width="720" height="1280" alt="photo_5416043688741246316_y" src="https://github.com/user-attachments/assets/6e6d96b4-677b-4348-ab46-a3542c083314" />
+<img width="720" height="1280" alt="photo_5416043688741246315_y" src="https://github.com/user-attachments/assets/eaec1c14-628d-4a2f-963f-e22906fdd48f" />
+<img width="720" height="1280" alt="photo_5416043688741246314_y" src="https://github.com/user-attachments/assets/9c01007c-a92f-488b-8eee-a2f45cdc49a4" />
+<img width="800" height="648" alt="photo_5416043688741246263_x" src="https://github.com/user-attachments/assets/09c3c9b7-b6cb-4b8c-8d63-b87717b52868" />
 
 ---
 
