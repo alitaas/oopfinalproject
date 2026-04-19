@@ -46,6 +46,6 @@ public class movie {
     }
 
     public void displayInfo() {
-        System.out.println(title + " | " + duration + " min | " + genre);
+        System.out.println(id + "." + title + " | " + duration + " min | " + genre);
     }
 }
