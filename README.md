@@ -98,7 +98,7 @@ The system supports two types of persistence:
 ---
 
 ##  Example Output
-(https://drive.google.com/file/d/13O7v8Oe54YaMsDdkkTMx9n9uaMXEk6Ar/view?usp=sharing)
+
 ---
 
 ##  Project Status
