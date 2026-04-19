@@ -188,7 +188,20 @@ This project must satisfy the following functional and quality requirements:
 
 ---
 
+## Presentation
+
+You can find the project presentation here:  
+[View presentation](https://drive.google.com/file/d/1_FPqU6OnNNgvT-AVjZtuH8mOQzCzO-XF/view?usp=sharing)  
+
+---
+## Documentation
+[Open documentation](documentation.md)
+
+---
+
 ##  Notes
 
 This project was developed as part of an **OOP Final Assignment** to demonstrate understanding of Java, object-oriented design, and data management systems.
+
+
 
