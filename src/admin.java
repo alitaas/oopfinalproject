@@ -16,6 +16,6 @@ public class admin extends person{
 
     @Override
     public void accessSystem() {
-        System.out.println("Can manage movies and screenings (CRUD access");
+        System.out.println("Can manage movies and screenings (CRUD access)");
     }
 }

@@ -12,7 +12,8 @@ public class movieservice {
 
         try (
                 PrintWriter writer = new PrintWriter("movies.csv");
-                Statement stmt = movieservice.conn.createStatement();
+                Connection conn = database.connect();
+                Statement stmt = conn.createStatement();
                 ResultSet rs = stmt.executeQuery(sql)
         ) {
 
@@ -42,7 +43,8 @@ public class movieservice {
 
         try (
                 BufferedReader reader = new BufferedReader(new FileReader(file));
-                PreparedStatement stmt = movieservice.conn.prepareStatement(sql)
+                Connection conn = database.connect();
+                PreparedStatement stmt = conn.prepareStatement(sql)
         ) {
 
             String line;
@@ -71,8 +73,6 @@ public class movieservice {
     }
 
 
-
-    private static Connection conn = database.connect();
     private static Scanner scanner = new Scanner(System.in);
 
     public static boolean isValidTitle(String title) {
@@ -92,6 +92,7 @@ public class movieservice {
         String sql = "SELECT id FROM movies WHERE id = ?";
 
         try {
+            Connection conn = database.connect();
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setInt(1, movieId);
 
@@ -150,6 +151,7 @@ public class movieservice {
         String sql = "INSERT INTO movies(title, duration, genre) VALUES (?, ?, ?)";
 
         try {
+            Connection conn = database.connect();
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, title);
             stmt.setInt(2, duration);
@@ -170,6 +172,7 @@ public class movieservice {
         String sql = "SELECT * FROM movies";
 
         try {
+            Connection conn = database.connect();
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
 
@@ -213,6 +216,7 @@ public class movieservice {
         String sql = "DELETE FROM movies WHERE id = ?";
 
         try {
+            Connection conn = database.connect();
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setInt(1, id);
 
@@ -298,6 +302,7 @@ public class movieservice {
         String sql = "UPDATE movies SET title = ?, duration = ?, genre = ? WHERE id = ?";
 
         try {
+            Connection conn = database.connect();
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, title);
             stmt.setInt(2, duration);

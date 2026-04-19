@@ -107,7 +107,8 @@ public class ScreeningService {
 
 
     public static boolean isValidTime(String time) {
-        return time.matches("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}");
+        // yyyy-MM-dd HH:mm
+        return time != null && time.matches("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}");
     }
 
     public static boolean isValidHall(String hall) {
@@ -139,7 +140,7 @@ public class ScreeningService {
     // ADD SCREENING (WITH LOOPS + VALIDATION)
     public static void addScreening() {
 
-        //MOVIE ID LOOP
+//MOVIE ID LOOP
         int movieId;
 
         while (true) {
@@ -167,7 +168,7 @@ public class ScreeningService {
             }
         }
 
-        //SCREENING TIME LOOP
+//SCREENING TIME LOOP
         String time;
         while (true) {
             System.out.print("Enter screening time (YYYY-MM-DD HH:MM): ");
@@ -178,7 +179,7 @@ public class ScreeningService {
             System.out.println("Invalid format! Example: 2026-04-16 18:30");
         }
 
-        //HALL LOOP
+//HALL LOOP
         String hall;
         while (true) {
             System.out.print("Enter hall (Available halls: 1, 2, 3, IMAX): ");
@@ -189,7 +190,7 @@ public class ScreeningService {
             System.out.println("Invalid hall! Choose: 1, 2, 3, IMAX");
         }
 
-        //conflict checking
+//conflict checking
         if (hasTimeConflict(movieId, time, hall)) {
 
             System.out.println("Time conflict! Another movie is playing in this hall at that time.");
@@ -236,7 +237,7 @@ public class ScreeningService {
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
 
-            System.out.println("\n===== SCREENINGS =====");
+            System.out.println("\\n===== SCREENINGS =====");
 
             while (rs.next()) {
                 screening screening = new screening(
@@ -248,7 +249,7 @@ public class ScreeningService {
 
                 System.out.println(
                         screening.getId() + ". " +
-                                rs.getString("title") + " | " +   // title from JOIN
+                                rs.getString("title") + " | " + // title from JOIN
                                 screening.getScreeningTime() + " | " +
                                 screening.getHall()
                 );
@@ -361,7 +362,7 @@ public class ScreeningService {
 
             for (String hall : halls) {
 
-                System.out.println("\n===== HALL " + hall + " =====");
+                System.out.println("\\n===== HALL " + hall + " =====");
 
                 PreparedStatement stmt = conn.prepareStatement(sql);
                 stmt.setString(1, hall);
@@ -376,7 +377,7 @@ public class ScreeningService {
                     String time = rs.getString("screening_time");
                     String title = rs.getString("title");
 
-                    // красиво обрезаем дату → оставляем только время
+// красиво обрезаем дату → оставляем только время
                     String onlyTime = time.substring(11); // HH:MM
 
                     System.out.println(onlyTime + " | " + title);
@@ -472,8 +473,8 @@ public class ScreeningService {
             System.out.println("Error: " + e.getMessage());
         }
     }
-
-
-
-
 }
+
+
+
+
