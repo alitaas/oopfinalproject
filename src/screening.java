@@ -16,10 +16,6 @@ public class screening {
         return id;
     }
 
-    public int getMovieId() {
-        return movieId;
-    }
-
     public String getScreeningTime() {
         return screeningTime;
     }
