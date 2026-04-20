@@ -78,7 +78,7 @@ public class movieservice {
     public static boolean isValidTitle(String title) {
         return title != null
                 && !title.trim().isEmpty()
-                && title.matches("[a-zA-Z0-9\\s]+");
+                && title.matches("[\\p{L}0-9\\s.,!?:'\"()-]+");
     }
 
     public static boolean isValidGenre(String genre) {
@@ -115,7 +115,7 @@ public class movieservice {
 
             if (isValidTitle(title)) break;
 
-            System.out.println("Invalid title! Use letters and numbers only.");
+            System.out.println("Invalid title!");
             }
 
 

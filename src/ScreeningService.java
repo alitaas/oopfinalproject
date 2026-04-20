@@ -121,7 +121,7 @@ public class ScreeningService {
         return false;
     }
 
-    public static int getConflictingScreeningId(String time, String hall) {
+    /*public static int getConflictingScreeningId(String time, String hall) {
 
         String sql =
                 "SELECT id FROM screenings WHERE screening_time = ? AND hall = ?";
@@ -142,7 +142,7 @@ public class ScreeningService {
         }
 
         return -1;
-    }
+    }*/
 
     // =========================
     // ADD SCREENING
