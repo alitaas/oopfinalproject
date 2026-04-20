@@ -24,7 +24,4 @@ public class screening {
         return hall;
     }
 
-    public void displayInfo() {
-        System.out.println(movieId + " | " + screeningTime + " | " + hall);
-    }
 }

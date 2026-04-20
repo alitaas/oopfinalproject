@@ -13,7 +13,11 @@ public class movie {
         this.genre = genre;
     }
 
-    public int getId(){
+    public void displayInfo() {
+        System.out.println(id + "." + title + " | " + duration + " min | " + genre);
+    }
+
+   /*public int getId(){
         return id;
     }
 
@@ -43,9 +47,7 @@ public class movie {
 
     public void setGenre(String genre) {
         this.genre = genre;
-    }
+    }*/
 
-    public void displayInfo() {
-        System.out.println(id + "." + title + " | " + duration + " min | " + genre);
-    }
+
 }
